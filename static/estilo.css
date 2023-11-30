@@ -60,3 +60,19 @@ img {
 .btn-salvar:hover{
     background-color: #000091;
 }
+
+.btnexcluir,
+.btneditar{
+    background-color: #c40000;
+    color: yellow;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btnexcluir:hover,
+.btneditar:hover{
+    background-color: #ff0000;
+}
+

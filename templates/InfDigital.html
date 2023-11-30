@@ -19,7 +19,10 @@
         <img src="/static/influencer.png">
         <p>Plataforma: {{ InfDigital.plataforma }}</p>
         <p>Seguidores: {{ InfDigital.seguidores }} </p>
-        <p>Área de Interesse: {{ InfDigital.interesse }} </p>
+        <p>Interesse: {{ InfDigital.interesse }} </p>
+
+        <a class="btnexcluir" href="/excluir/{{ InfDigital.nome }}" >Excluir</a>
+        <a class="btneditar" href="editar/{{ InfDigital.nome }}" >Editar</a>
         <br>
 
 
