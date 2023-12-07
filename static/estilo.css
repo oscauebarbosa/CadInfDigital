@@ -76,3 +76,15 @@ img {
     background-color: #ff0000;
 }
 
+.btncadastrar{
+    background-color: rgba(0, 0, 253, 0.82);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btncadastrar:hover{
+    background-color: rgba(0, 0, 196, 0.82);
+}
