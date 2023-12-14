@@ -31,14 +31,17 @@ def cadastro():
 
 @app.route('/criar', methods= ['POST'])
 def criar():
-    nome = request.form['nome']
-    plataforma = request.form['plataforma']
-    seguidores = request.form['seguidores']
-    interesse = request.form['interesse']
+    if 'salvar' in request.form:
+        nome = request.form['nome']
+        plataforma = request.form['plataforma']
+        seguidores = request.form['seguidores']
+        interesse = request.form['interesse']
+        obj = cadInfDigital(nome, plataforma, seguidores, interesse)
+        lista.append(obj)
+        return redirect('/influenciadores')
+    elif 'deslogar' in request.form:
+        return redirect('/')
 
-    obj = cadInfDigital(nome, plataforma, seguidores, interesse)
-    lista.append(obj)
-    return redirect('/influenciadores')
 
 @app.route('/excluir/<nomeinf>', methods=['GET','DELETE'])
 def excluir(nomeinf) :
@@ -80,7 +83,7 @@ def autenticar():
         return redirect('/cadastro')
     else:
         flash('Usuario não encontrado')
-        return redirect('/login')
+        return redirect('/')
 
 
 
